@@ -1,0 +1,75 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <div class="constainer text-center">
+  	<h1 class="text-center text-danger">BACKEND ExpressJS</h1>
+ 
+  <hr>
+  <a class="btn btn-outline-success" href="/datas">console.json</a>
+  <a class="btn btn-outline-dark" href="/datas/users">users.json</a>
+
+  <hr>
+ </div>
+  <div class="container">
+  	<div class="row">
+  		<div class="col-6">
+  			<h1 class="text-success">Ajouter une console</h1>
+  			<form action="/datas" method="post">
+			  <div class="form-group">
+			    <label for="name">Nom</label>
+			    <input type="text" class="form-control" id="name" required="" name="name" placeholder="Nom de la console">
+			   
+			  </div>
+			  <div class="form-group">
+			    <label for="description">Description</label>
+			    <textarea class="form-control" id="description" required="" name="description" placeholder="Description de la console"  rows="3"></textarea>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="price">Prix</label>
+			    <input type="number" class="form-control" id="price" name="price" required="" placeholder="Prix de la console">
+			   
+			  </div>
+
+			  <div class="form-group">
+			    <label for="photo">Photo</label>
+			    <input type="text" class="form-control" id="photo" name="photo" placeholder="Chemin de la photo de la console">
+			   
+			  </div>
+			  
+			  <button type="submit" class="btn btn-outline-primary">Ajouter console</button>
+		</form>
+  		</div>
+
+  		<div class="col-6">
+  			<h1 class="text-dark">Ajouter un utilisateur</h1>
+  			  <form action="/datas/users" method="post">
+			  <div class="form-group">
+			    <label for="name">Nom</label>
+			    <input type="text" class="form-control" id="name" required="" name="name" placeholder="Nom de l'utilisateur'">
+			   
+			  </div>
+			  <div class="form-group">
+			    <label for="age">Age</label>
+			    <input type="number" class="form-control" id="age" required="" name="age" placeholder="Age de l'utilisateur"/>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="ville">Ville</label>
+			    <input type="text" class="form-control" id="ville" name="town" required="" placeholder="Ville de l'utilisateur">
+			   
+			  </div>
+
+			  <div class="form-group">
+			    <label for="compagny">Socièté</label>
+			    <input type="text" class="form-control" id="compagny" name="compagny" placeholder="Socièté de l'utilisateur">
+			   
+			  </div>
+			  
+			  <button type="submit" class="btn btn-outline-secondary">Ajouter utilisateur</button>
+		</form>
+  		</div>
+
+  	</div>
+  </div>
+{% endblock %}
